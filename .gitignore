@@ -7,8 +7,10 @@ pom.xml
 .lein-deps-sum
 .lein-repl-history
 .lein-plugins/
+.lein-env
 .repl
 .nrepl-port
 .cpcache/
 .rebel_readline_history
 */.rebel_readline_history
+.figwheel.log

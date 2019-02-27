@@ -1,0 +1,17 @@
+{:paths ["src" "src/content_script" "resources"]
+ :deps {org.clojure/clojure {:mvn/version "1.10.0"}
+        org.clojure/clojurescript {:mvn/version "1.10.520"}
+        binaryage/chromex {:mvn/version "0.7.0"}
+        binaryage/devtools {:mvn/version "0.9.10"}
+        figwheel {:mvn/version "0.5.18"}
+        ; com.bhauman/rebel-readline-cljs {:mvn/version "0.1.4"}
+        ; com.bhauman/figwheel-main {:mvn/version "0.2.0"}
+        com.bhauman/figwheel-repl {:mvn/version "0.2.0"}}
+
+ :aliases {:fig {:extra-deps
+                  {com.bhauman/rebel-readline-cljs {:mvn/version "0.1.4"}
+                   com.bhauman/figwheel-main {:mvn/version "0.2.0"}}
+                 :extra-paths ["target" "test"]}
+           :build {:main-opts ["-m" "figwheel.main" "-b" "dev" "-r"]}
+           :min   {:main-opts ["-m" "figwheel.main" "-O" "advanced" "-bo" "dev"]}
+           :mins  {:main-opts ["-m" "figwheel.main" "-O" "advanced" "-bo" "dev" "-s"]}}}
